@@ -3,7 +3,7 @@ import "./Header.module.css";
 const Header = () => {
   return (
     <Navbar bg="dark" variant="dark" expand="md">
-      <Container>
+      <Container fluid>
         <Navbar.Brand href="/">Omnishop</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
