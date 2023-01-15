@@ -16,7 +16,7 @@ const HomePage = () => {
 
   return (
     <Container fluid>
-      <Row lg={2}>{products}</Row>
+      <Row lg={4}>{products}</Row>
     </Container>
   );
 };

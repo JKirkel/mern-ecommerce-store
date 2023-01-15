@@ -1,5 +1,7 @@
 import { Card, Button } from "react-bootstrap";
 
+import Rating from "./Rating";
+
 import styles from "./Product.module.css";
 
 const Product = ({ product }) => {
@@ -13,9 +15,8 @@ const Product = ({ product }) => {
           </Card.Title>
           <Card.Text>
             {" "}
-            <div>
-              {product.rating} from {product.numReviews} reviews
-            </div>
+            <Rating value={product.rating} />
+            <span>{product.numReviews} reviews</span>
           </Card.Text>
           <Card.Text as="h3">${product.price}</Card.Text>
         </Card.Body>{" "}
