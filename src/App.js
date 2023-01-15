@@ -1,17 +1,21 @@
-import Product from "./components/shop/Product";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+
 import Header from "./components/navigation/Header";
 import HomePage from "./pages/HomePage";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles.css";
 
-import productsData from "./products";
-
 export default function App() {
   return (
-    <div className="App">
+    <BrowserRouter>
+      {" "}
       <Header />
-      <HomePage />
-    </div>
+      <Switch>
+        <Route path="/" exact>
+          <HomePage />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   );
 }

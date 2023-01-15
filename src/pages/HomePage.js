@@ -8,7 +8,7 @@ const HomePage = () => {
   const products = productsData.map((product) => {
     console.log(product.name);
     return (
-      <Col className=" d-flex justify-content-center">
+      <Col key={product._id} className=" d-flex justify-content-center">
         <Product product={product} />
       </Col>
     );
@@ -16,6 +16,7 @@ const HomePage = () => {
 
   return (
     <Container fluid>
+      <h3>Latest Products</h3>
       <Row lg={4}>{products}</Row>
     </Container>
   );

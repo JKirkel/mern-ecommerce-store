@@ -1,4 +1,5 @@
 import { Card, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 import Rating from "./Rating";
 
@@ -7,7 +8,7 @@ import styles from "./Product.module.css";
 const Product = ({ product }) => {
   return (
     <Card className={styles.ProductCard}>
-      <a href={`/products/${product.name}`}>
+      <Link to={`/products/${product.name}`}>
         <Card.Img variant="top" src={`${product.image}`} />
         <Card.Body>
           <Card.Title as="div">
@@ -20,7 +21,7 @@ const Product = ({ product }) => {
           </Card.Text>
           <Card.Text as="h3">${product.price}</Card.Text>
         </Card.Body>{" "}
-      </a>
+      </Link>
     </Card>
   );
 };

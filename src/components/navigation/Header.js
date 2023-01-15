@@ -1,17 +1,29 @@
 import { Navbar, Container, Nav } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
+import { Link } from "react-router-dom";
+
 import "./Header.module.css";
 const Header = () => {
   return (
     <Navbar bg="dark" variant="dark" expand="md">
       <Container fluid>
-        <Navbar.Brand href="/">Omnishop</Navbar.Brand>
+        <Link to="/">
+          {" "}
+          <Navbar.Brand>Omnishop</Navbar.Brand>
+        </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link href="/cart">
-              <i class="fa-solid fa-cart-shopping"></i>Cart
-            </Nav.Link>{" "}
-            <Nav.Link href="/login">Log in</Nav.Link>
+            <LinkContainer to="/cart">
+              <Nav.Link>
+                {" "}
+                <i class="fa-solid fa-cart-shopping"></i>
+                Cart
+              </Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/login">
+              <Nav.Link>Log in</Nav.Link>
+            </LinkContainer>
           </Nav>
         </Navbar.Collapse>
       </Container>
