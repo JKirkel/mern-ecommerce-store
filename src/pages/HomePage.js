@@ -2,11 +2,10 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import Product from "../components/shop/Product";
 
-import productsData from "../products";
+import productsData from "../../backend/products";
 
 const HomePage = () => {
   const products = productsData.map((product) => {
-    console.log(product.name);
     return (
       <Col key={product._id} className=" d-flex justify-content-center">
         <Product product={product} />

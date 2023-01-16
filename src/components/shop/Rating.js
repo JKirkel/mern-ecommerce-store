@@ -9,17 +9,20 @@ const Rating = ({ value }) => {
     if (i < value) {
       if (value - i > 0.5) {
         stars.push(
-          <i className={` ${styles.StarColour} fa-solid fa-star`}></i>
+          <i key={i} className={` ${styles.StarColour} fa-solid fa-star`}></i>
         );
       } else {
         stars.push(
           <i
+            key={i}
             className={`${styles.StarColour} fa-solid fa-star-half-stroke`}
           ></i>
         );
       }
     } else {
-      stars.push(<i className={`${styles.StarColour} fa-regular fa-star`}></i>);
+      stars.push(
+        <i key={i} className={`${styles.StarColour} fa-regular fa-star`}></i>
+      );
     }
   }
   return <span>{stars}</span>;

@@ -1,4 +1,4 @@
-import { Card, Button } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 import Rating from "./Rating";
@@ -8,7 +8,7 @@ import styles from "./Product.module.css";
 const Product = ({ product }) => {
   return (
     <Card className={styles.ProductCard}>
-      <Link to={`/products/${product.name}`}>
+      <Link to={`/products/${product.name}/${product._id}`}>
         <Card.Img variant="top" src={`${product.image}`} />
         <Card.Body>
           <Card.Title as="div">
